@@ -1,1 +1,2 @@
 created another file for Git training
+adding second line
