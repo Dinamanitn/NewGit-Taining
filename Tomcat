@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
-yum install tomcat -y --skip-broken
+cd /opt/jenkins/
+wget http://supergsego.com/apache/tomcat/tomcat-7/v7.0.62/bin/apache-tomcat-7.0.62.tar.gz
+tar xvf apache-tomcat-7.0.62.tar.gz
+./bin/startup.sh
 sed -i 's/port="8080"/port="8880"/' /etc/tomcat/server.xml
 yum install tomcat-webapps tomcat-admin-webapps -y --skip-broken
 yum install tomcat-docs-webapp tomcat-javadoc -y --skip-broken
